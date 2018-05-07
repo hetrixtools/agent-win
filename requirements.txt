@@ -1,0 +1,14 @@
+altgraph==0.15
+certifi==2018.1.18
+chardet==3.0.4
+dis3==0.1.2
+future==0.16.0
+idna==2.6
+macholib==1.9
+pefile==2017.11.5
+psutil==5.4.3
+PyInstaller==3.3.1
+pywin32==222
+requests==2.18.4
+urllib3==1.22
+WMI==1.4.9
