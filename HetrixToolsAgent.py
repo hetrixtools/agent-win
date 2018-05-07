@@ -36,7 +36,6 @@ class AppServerSvc (win32serviceutil.ServiceFramework):
         servicemanager.LogInfoMsg('SID {}'.format(SID))
         while True:
             data = monitor.gather_data(SID)
-            servicemanager.LogInfoMsg('data {}'.format(data))
             if win32event.WaitForSingleObject(self.hWaitStop, 100) == win32event.WAIT_OBJECT_0:
                 break
 
