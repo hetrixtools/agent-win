@@ -11,8 +11,8 @@ import pythoncom
 # Settings
 ####################
 # Server version (do not edit)
-VERSION = '1.5.2'
-URL = 'https://sm.hetrixtools.com'
+VERSION = '1.5.3'
+URL = 'https://sm.hetrixtools.net'
 
 ####################
 # Functions
@@ -89,9 +89,12 @@ def gather_data(server_id):
     all_disk_data = []
     for disk in disks:
         if disk.fstype:
-            disk_usage = psutil.disk_usage(disk.mountpoint)
-            disk_data = ','.join([disk.mountpoint, str(disk_usage.total), str(disk_usage.used)])
-            all_disk_data.append(disk_data)
+            try:
+                disk_usage = psutil.disk_usage(disk.mountpoint)
+                disk_data = ','.join([disk.mountpoint, str(disk_usage.total), str(disk_usage.used)])
+                all_disk_data.append(disk_data)
+            except:
+                pass
 
     disk_str = '{};'.format(';'.join(all_disk_data))
     disks = base64.b64encode(disk_str)
