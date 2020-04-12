@@ -35,7 +35,11 @@ class AppServerSvc (win32serviceutil.ServiceFramework):
         SID = win32serviceutil.GetServiceCustomOption(SERVICE_NAME, 'sid')
         servicemanager.LogInfoMsg('SID {}'.format(SID))
         while True:
-            data = monitor.gather_data(SID)
+            try:
+                data = monitor.gather_data(SID)
+            except Exception as e:
+                servicemanager.LogErrorMsg('ERROR: {}'.format(e))
+                pass
             if win32event.WaitForSingleObject(self.hWaitStop, 100) == win32event.WAIT_OBJECT_0:
                 break
 
