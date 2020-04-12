@@ -11,7 +11,7 @@ import pythoncom
 # Settings
 ####################
 # Server version (do not edit)
-VERSION = '1.5.3'
+VERSION = '1.5.4'
 URL = 'https://sm.hetrixtools.net'
 
 ####################
