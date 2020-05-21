@@ -125,4 +125,4 @@ def gather_data(server_id):
     payload = {'v': VERSION, 'a': '2', 's': server_id, 'd': post_data}
 
     # Post the collected data
-    requests.post(URL, data=payload, timeout=15)
+    requests.post(URL, data=payload, timeout=15, verify=False)
