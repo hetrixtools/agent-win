@@ -11,7 +11,7 @@ import pythoncom
 # Settings
 ####################
 # Server version (do not edit)
-VERSION = '1.5.3'
+VERSION = '1.5.4'
 URL = 'https://sm.hetrixtools.net'
 
 ####################
@@ -125,8 +125,4 @@ def gather_data(server_id):
     payload = {'v': VERSION, 'a': '2', 's': server_id, 'd': post_data}
 
     # Post the collected data
-    try:
-        requests.post(URL, data=payload)
-    except:
-        # Can't send data, try again next minute
-        pass
+    requests.post(URL, data=payload, timeout=15, verify=False)
