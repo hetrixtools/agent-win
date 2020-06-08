@@ -1,6 +1,6 @@
-# [Pre-Alpha] HetrixTools Server Monitoring Agent (Windows)
+# [Alpha] HetrixTools Server Monitoring Agent (Windows)
 
-**Please Note:** this is a Pre-Alpha version, still needing a lot more work to be production ready.
+**Please Note:** this is an Alpha version, still needing a lot more work to be production ready.
 
 ## Method 1 - Use the already compiled agent
 We have provided the already compiled agent executable, here:  
