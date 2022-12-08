@@ -1,5 +1,5 @@
 altgraph==0.15
-certifi==2018.1.18
+certifi==2022.12.7
 chardet==3.0.4
 dis3==0.1.2
 future==0.16.0
